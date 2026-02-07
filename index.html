@@ -2,13 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>For Aira ❤️</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="game-container">
+    <!-- Start Screen Overlay -->
+    <div id="start-screen">
+        <div class="login-container">
+            <h1>❤️ Welcome ❤️</h1>
+            <p>Before we begin...</p>
+            <label for="anniversary-input">When is our anniversary?</label>
+            <input type="text" id="anniversary-input" placeholder="Month Day Year">
+            <button id="start-btn">Enter</button>
+            <p id="error-msg">Incorrect. Please try again.</p>
+        </div>
+    </div>
+
+    <div id="game-container" style="display: none;">
         <canvas id="gameCanvas"></canvas>
+    </div>
+
+    <!-- Mobile Controls moved outside -->
+    <div id="mobile-controls" style="display: none;">
+        <div class="control-row">
+            <button id="btn-up" class="control-btn">▲</button>
+        </div>
+        <div class="control-row">
+            <button id="btn-left" class="control-btn">◀</button>
+            <button id="btn-down" class="control-btn">▼</button>
+            <button id="btn-right" class="control-btn">▶</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
