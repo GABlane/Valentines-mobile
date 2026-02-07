@@ -393,7 +393,7 @@ function update() {
     const dist = Math.sqrt(Math.pow(pCX - sCX, 2) + Math.pow(pCY - sCY, 2));
     
     if (dist < TILE_DISPLAY_SIZE * 2.0) { // Increased radius to 2.0 tiles
-        const isGameMsg = messageText === "You found a Heart! <3" || messageText === "Locked! You need a Heart." || memoryNotes.some(n => n.text === messageText);
+        const isGameMsg = messageText === "You found my Heart! <3" || messageText === "Locked! You need a Heart." || memoryNotes.some(n => n.text === messageText);
         // Only trigger sign if not showing a high-priority game message
         if (!showMessage || (isGameMsg && textIndex >= messageText.length)) {
             triggerMessage(signText);
